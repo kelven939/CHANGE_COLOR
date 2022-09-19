@@ -7,6 +7,7 @@ function cor() {
           document.body.appendChild(elemento); */
 
   let everyColor = [1];
+  let greenColors = ['#05ad2f', '#0cdf41', '#00ff40']
 
   let word = document.querySelector(".word");//Pega o h1 no html
   let color = document.querySelector(".col").value;//Coloca a cor no campo input do type color
@@ -18,12 +19,22 @@ function cor() {
 
   for (let i = 0; i < color.length; i++) {
     everyColor[1] = color;
+    //for (let j = 0; j < greenColors.length; j++) {
+    //greenColors[j];
+    //console.log(greenColors[j]);
     if (color === everyColor[i]) {
       word.setAttribute("style", "color: green");
       console.log(333);
-    } else if (color === "#14a939" || color === "#1ee650" || color === "##1b7933" || color === "#0e5d22" || color === "#04200b" || color === "#469158" || color === "#05ff3f" || color === "#318825" || color === "#257441") {
-      word.setAttribute("style", "color: #000000");
+    } //else if (color === greenColors[j]) {
+    //  word.setAttribute("style", "color: black");
+    //}
+    for (let j = 0; j < greenColors.length; j++) {
+      console.log(greenColors[j]);
+      if (color === greenColors[j]) {
+        word.setAttribute("style", "color: black");
+      }
     }
+    //}
   }
   /*  if(elemento.style.color==body.style.backgroundColor[i]){
   .log(                     elemento.style.backgroundColor=elemento.style.backgroundColor[i+1]);
